@@ -12,6 +12,6 @@ workflows:
     jobs:
       - approval-run:
           type: approval
-      - welcome/run
+      - welcome/run:
           requires:
             - approval-run
