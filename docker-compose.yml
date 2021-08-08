@@ -9,6 +9,6 @@ services:
     tty: true
     volumes:
       - ./docker/terraform/.aws:/home/devuser/.aws
-      - ./docker/terraform:/home/devuser/terraform
+      - ./terraform:/home/devuser/terraform
     env_file: ./docker/terraform/envfile
     working_dir: /home/devuser
