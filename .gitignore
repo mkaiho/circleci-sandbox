@@ -1,3 +1,9 @@
 .ssh/
 docker/terraform/.aws
 docker/terraform/envfile
+
+.terraform
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup

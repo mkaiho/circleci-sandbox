@@ -10,5 +10,5 @@ services:
     volumes:
       - ./docker/terraform/.aws:/root/.aws
       - .:/work
-    env_file: ./docker/terraform/envfile
+    env_file: ./docker/terraform/env/envfile
     working_dir: /work
