@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  terraform-local:
+    build:
+      context: .
+      dockerfile: ./docker/terraform/dockerfile
+    container_name: terraform-local
+    tty: true
+    volumes:
+      - ./docker/terraform/.aws:/work/.aws
+      - ./docker/terraform:/work/terraform
+    env_file: ./docker/terraform/envfile
+    working_dir: /work
