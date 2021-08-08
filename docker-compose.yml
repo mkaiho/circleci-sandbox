@@ -8,7 +8,7 @@ services:
     container_name: terraform-local
     tty: true
     volumes:
-      - ./docker/terraform/.aws:/work/.aws
-      - ./docker/terraform:/work/terraform
+      - ./docker/terraform/.aws:/home/devuser/.aws
+      - ./docker/terraform:/home/devuser/terraform
     env_file: ./docker/terraform/envfile
-    working_dir: /work
+    working_dir: /home/devuser

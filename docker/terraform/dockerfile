@@ -11,10 +11,15 @@ RUN apt-get update \
   && ./aws/install --bin-dir /aws-cli-bin/
 
 FROM debian:bullseye-slim
+
+WORKDIR /home/devuser
+
 RUN apt-get update -y \
   && apt-get install -y less groff \
   && apt-get clean all
 COPY --from=installer /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=installer /aws-cli-bin/ /usr/local/bin/
 COPY --from=installer /usr/bin/terraform/ /usr/local/bin/
-WORKDIR /work
+
+RUN groupadd -r dev && useradd -r -g dev devuser
+USER devuser
