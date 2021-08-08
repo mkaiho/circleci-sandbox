@@ -1,0 +1,11 @@
+{
+  "name": "terraform-local",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+  ],
+  "service": "terraform-local",
+  "workspaceFolder": "/work",
+  "extensions": [
+    "hashicorp.terraform"
+  ]
+}
